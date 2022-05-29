@@ -21,7 +21,7 @@
     "firebase-admin": "8.10.0",
     "graphql": "15.0.0",
     "graphql-tools": "7.0.2",
-    "mongoose": "5.9.7"
+    "mongoose": "5.10.2"
   },
   "devDependencies": {
     "nodemon": "2.0.2"

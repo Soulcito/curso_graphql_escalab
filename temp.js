@@ -10,6 +10,12 @@ const posts = [
     title: "My second Post",
     description: "Second post published",
     category: "PENDING"     
+   },
+   {
+    id: 3,
+    title: "My thirt Post",
+    description: "Thirt post published",
+    category: "PENDING"     
    }
 ];
 
