@@ -14,7 +14,7 @@ module.exports = gql`
    }
    # input type
    input PostInput {
-     type: String!
+     title: String!
      description: String!
    }
    # mutations

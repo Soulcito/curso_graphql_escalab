@@ -28,10 +28,12 @@ readdirSync("./rest").map((r) => app.use('/api', require('./rest/' + r)));
 const typeDefs = mergeTypeDefs(loadFilesSync(path.join(__dirname, "./typeDefs")));
 
 // resolvers
+const resolvers = mergeResolvers(loadFilesSync(path.join(__dirname, "./resolvers")));
 
 // apollo-server config / sign
 const apolloServer = new ApolloServer({
-   typeDefs
+   typeDefs,
+   resolvers,
 })
 
 // vinculation apollo-server with express
@@ -39,5 +41,6 @@ apolloServer.applyMiddleware({ app });
 
 // server listen
 app.listen( process.env.PORT, ()=> {
-   console.log(`server is ready at http:localhost:${process.env.PORT}`); 
+   console.log(`server is ready at http://localhost:${process.env.PORT}`);
+   console.log(`graphql server is ready at http://localhost:${process.env.PORT}${apolloServer.graphqlPath}`);
 });
